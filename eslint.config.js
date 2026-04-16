@@ -1,6 +1,6 @@
-import js from '@eslint/js';
-import globals from 'globals';
-import stylistic from '@stylistic/eslint-plugin';
+import js from '@eslint/js'
+import globals from 'globals'
+import stylistic from '@stylistic/eslint-plugin'
 
 export default [
   js.configs.recommended,
@@ -19,19 +19,20 @@ export default [
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'off',
-      'no-undef': 'error',
 
       '@stylistic/indent': ['error', 2],
       '@stylistic/linebreak-style': ['error', 'unix'],
       '@stylistic/quotes': ['error', 'single'],
-      '@stylistic/semi': ['error', 'always'],
+      '@stylistic/semi': ['error', 'never'],
       '@stylistic/comma-dangle': ['error', 'only-multiline'],
       '@stylistic/space-before-function-paren': ['error', 'never'],
       '@stylistic/arrow-parens': ['error', 'always'],
       '@stylistic/object-curly-spacing': ['error', 'always'],
+      '@stylistic/brace-style': ['error', '1tbs'],
+      '@stylistic/eol-last': ['error', 'always'],
     },
   },
   {
     ignores: ['node_modules/', 'coverage/'],
   },
-];
+]
