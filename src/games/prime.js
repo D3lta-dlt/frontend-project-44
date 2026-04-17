@@ -1,6 +1,6 @@
 import runGame from '../index.js'
 
-const isPrime = (num) => {
+const isPrime = num => {
   if (num < 2) return false
   if (num === 2) return true
 

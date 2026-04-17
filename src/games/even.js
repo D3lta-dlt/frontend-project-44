@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync'
 import greetUser from '../cli.js'
 
-const isEven = (num) => num % 2 === 0
+const isEven = num => num % 2 === 0
 
 const playEvenGame = () => {
   const name = greetUser()

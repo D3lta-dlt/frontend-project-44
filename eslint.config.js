@@ -1,6 +1,5 @@
 import js from '@eslint/js'
 import globals from 'globals'
-import stylistic from '@stylistic/eslint-plugin'
 
 export default [
   js.configs.recommended,
@@ -8,31 +7,25 @@ export default [
     files: ['**/*.js'],
     languageOptions: {
       sourceType: 'module',
-      globals: {
-        ...globals.node,
-        ...globals.es2021,
-      },
-    },
-    plugins: {
-      '@stylistic': stylistic,
+      globals: globals.node,
     },
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'off',
-
-      '@stylistic/indent': ['error', 2],
-      '@stylistic/linebreak-style': ['error', 'unix'],
-      '@stylistic/quotes': ['error', 'single'],
-      '@stylistic/semi': ['error', 'never'],
-      '@stylistic/comma-dangle': ['error', 'only-multiline'],
-      '@stylistic/space-before-function-paren': ['error', 'never'],
-      '@stylistic/arrow-parens': ['error', 'always'],
-      '@stylistic/object-curly-spacing': ['error', 'always'],
-      '@stylistic/brace-style': ['error', '1tbs'],
-      '@stylistic/eol-last': ['error', 'always'],
+      'no-undef': 'error',
+      'indent': ['error', 2],
+      'linebreak-style': ['error', 'unix'],
+      'quotes': ['error', 'single'],
+      'semi': ['error', 'never'],
+      'comma-dangle': ['error', 'only-multiline'],
+      'eol-last': ['error', 'always'],
+      'arrow-parens': ['error', 'as-needed'],
+      'brace-style': ['error', '1tbs', { allowSingleLine: true }],
+      'object-curly-spacing': ['error', 'always'],
+      'space-before-function-paren': ['error', 'never'],
     },
   },
   {
-    ignores: ['node_modules/', 'coverage/'],
+    ignores: ['node_modules/'],
   },
 ]
