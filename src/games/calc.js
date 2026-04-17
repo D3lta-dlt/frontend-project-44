@@ -4,14 +4,14 @@ const operators = ['+', '-', '*']
 
 const calculate = (a, b, operator) => {
   switch (operator) {
-  case '+':
-    return a + b
-  case '-':
-    return a - b
-  case '*':
-    return a * b
-  default:
-    throw new Error(`Unknown operator: ${operator}`)
+    case '+':
+      return a + b
+    case '-':
+      return a - b
+    case '*':
+      return a * b
+    default:
+      throw new Error(`Unknown operator: ${operator}`)
   }
 }
 

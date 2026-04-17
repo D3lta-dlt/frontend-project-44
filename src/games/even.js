@@ -22,7 +22,8 @@ const playEvenGame = () => {
     if (answer === correctAnswer) {
       console.log('Correct!')
       correctAnswers += 1
-    } else {
+    }
+    else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
       console.log(`Let's try again, ${name}!`)
       return
